@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.min.css">
+</head>
+
+<body>
+    <div class="w3-container w3-row">
+        <div class="w3-col s12 m5 l5">
+            <h1>Scrambled images</h1>
+            <hr>
+            <img src="./images/scrambled_origin_1.png" alt="">
+            <hr>
+            <img src="./images/scrambled_origin_2.png" alt="">
+            <hr>
+            <img src="./images/scrambled_origin_3.png" alt="">
+        </div>
+        <div class="w3-col s12 m2 l2">.</div>
+        <div class="w3-col s12 m5 l5">
+            <h1>Unscrambled images</h1>
+            <hr>
+            <canvas id="canvas1"></canvas>
+            <hr>
+            <canvas id="canvas2"></canvas>
+            <hr>
+            <canvas id="canvas3"></canvas>
+        </div>
+    </div>
+</body>
+
+<script src="./js/image-scramble.min.js"></script>
+<script>
+    unscrambleImage('canvas1', './images/scrambled_origin_1.png', {
+        colNum: 3,
+        rowNum: 4,
+        order: [3, 2, 9, 1, 8, 7, 0, 10, 6, 5, 11, 4]
+    })
+    unscrambleImage('canvas2', './images/scrambled_origin_2.png', {
+        colNum: 1,
+        rowNum: 12,
+        order: [3, 2, 9, 1, 8, 7, 0, 10, 6, 5, 11, 4]
+    })
+    unscrambleImage('canvas3', './images/scrambled_origin_3.png', {
+        colNum: 12,
+        rowNum: 1,
+        order: [3, 2, 9, 1, 8, 7, 0, 10, 6, 5, 11, 4]
+    })
+</script>
+
+</html>
